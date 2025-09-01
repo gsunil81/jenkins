@@ -19,10 +19,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                    credentialsId: 'Github_token',
-                    url: 'https://github.com/sunil8179/springboot-app.git'
-                sh 'ls -la'
+                sh 'ls -la' // Uses the repo Jenkins already checked out
             }
         }
 
